@@ -1,0 +1,130 @@
+<!DOCTYPE html5>
+<html5>
+	<head>
+		<meta char set = "utf-8">
+		<style>
+		h1, h2 {
+		  color: green;
+		}
+		#program{
+		  color: purple;
+		}
+		#lsucs, #eng{
+		  font-size: 1.5em;
+		  text-decoration: underline;
+		}
+		#socialMedia{
+		  font-weight: bold;
+		}
+		.list1{
+		  line-height: 2em;
+		  color: red;
+		}
+		#program, #city{
+		  text-align: center;
+		}
+		#city{
+		  color: blue;
+		}
+		#socialMedia:visited{
+		  color: lightblue;
+		}
+		#gender, .sign_up, #selection, #experience{
+		  color: darkred;
+		  font-weight: bold;
+		}
+		#signUpEmail, #signUpName{
+		  background-color: lightblue;
+		}
+		</style>
+		<title>About LSU</title>
+	</head>
+	<body>
+		<img src = "https://www.lsu.edu/administration/ofa/procurement/files/LSU_Purple_CMYK.png" alt = "">
+		
+		<h1 id = header1>About</h1>
+		<p id = firstWords>Welcome to the <strong id = lsucs>Division of Computer Science and Engineering</strong> at LSU! The division resides in the newly<br>
+			formed School of Electrical Engineering and Computer Science (EECS) in the <em id = eng>College of Engineering</em>.
+		</p>
+		
+		<h2 id = header2>The location of our collaborators</h2>
+		<ul>
+			<li class = worldwide>USA</li>
+				<ul class = list1>
+					<li>
+						<a href = "https://www.ny.gov/">New York</a>
+					</li>
+					<li>
+						<a href = "https://www.columbus.gov/">Columbus</a>
+					</li>
+					<li>
+						<a href = "http://www.austintexas.gov/">Austin</a>
+					</li>
+					<li>
+						<a href = "https://www.phila.gov/">Philly</a>
+					</li>
+				</ul>
+			<li class = worldwide>World</li>
+				<ul class = list1>
+					<li>
+						<a href = "https://ottawa.ca/en">Ottawa</a>
+					</li>
+					<li>
+						<a href = "https://www.cityofsydney.nsw.gov.au/">Sydney</a>
+					</li>
+				</ul>
+		</ul>
+		
+		<h2>Upcoming Classes</h2>
+		<table border = "1">
+			<thead>
+				<tr>
+					<th class = upcoming>Location</th>
+					<th class = upcoming>Topic</th>
+				</tr>
+				<tr>
+					<td class = upcoming, id = city>New York</td>
+					<td class = upcoming, id = program>JavaScript & jQuery</td>
+				</tr>
+				<tr>
+					<td class = upcoming, id = city>San Francisco</td>
+					<td class = upcoming, id = program>HTML & CSS </td>
+				</tr>
+			</thead>
+		</table>
+		
+		<h2>Sign Up!</h2>
+		<form action = "" method = get class = "sign_up">
+			Name: <input type = "text" name = first, id = signUpName><br>
+			Email: <input type = "text" name = last, id = signUpEmail>
+		</form>
+		
+		<label for = "location" id = selection>Location:</label>
+		<select name = "location" id = "location">
+			<option value = "San Francisco">San Francisco</option>
+			<option value = "New York">New York</option>
+		</select>
+		
+		<fieldset id = gender>
+			<legend>Gender:</legend>
+			<label for = "female">Female</label>
+			<input type = "radio" name = "gender" id = "female" value = "female">
+			<label for = "male">Male</label>
+			<input type = "radio" name = "gender" id = "Male" value = "Male">
+		</fieldset><br>
+		
+		<label id = experience>Experience:<br>
+			<textarea name = "experience"></textarea>
+		</label><br>
+
+		<button type = "submit">Sign up</button><br><br>
+		
+		<p id = socialMedia>
+			<a href = "https://twitter.com/LSU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
+			|			
+			<a href = "https://www.facebook.com/geauxlsu/">Facebook</a>
+			|
+			<a href = "https://www.flickr.com/groups/lsu/">Flickr</a>
+		</p>
+	</body>
+</html5>

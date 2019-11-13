@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://www.csc.lsu.edu/~qywang/CS6210/HTMLExercise/lecture16/exercise1-key.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Video Watcher</title>
+    <link rel="stylesheet" type="text/css" href="./Video Watcher test_files/bootstrap.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2 class="page-header">Best Videos Ever ?</h2>
+        </div>
+      </div>
+ 
+      <div class="row">
+        <div class="span3">
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=TddFnTB_7IM">Trip through the 80s<img src="./Video Watcher test_files/default.jpg"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=epUk3T2Kfno">Otters Holding Hands<img src="./Video Watcher test_files/default(1).jpg"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=il2IrgFHfsg">The Ooooh Cat<img src="./Video Watcher test_files/default(2).jpg"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	
+	<div id = video-watcher></div>
+
+    <script type="text/javascript" src="./Video Watcher test_files/youtube.js.download"></script>
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+
+    <script>
+      var videoLinks = $('a');
+      for (var i = 0; i < videoLinks.length; i++) {
+        var linkUrl = videoLinks[i].getAttribute('href');
+		videoLinks.on('click', function(e) {
+			e.preventDefault();
+			var videoEmbed = $('<iframe></iframe>');
+			videoEmbed.attr('src', youtube.generateEmbedUrl(linkUrl));
+			videoEmbed.attr('width', 560);
+			videoEmbed.attr('height', 315);
+			var videoWatcher = $('#video-watcher');
+			videoWatcher.html(videoEmbed);
+			});
+        var thumbnailUrl = youtube.generateThumbnailUrl(linkUrl);
+        var thumbnailImg = document.createElement('img');
+        thumbnailImg.setAttribute('src', thumbnailUrl);
+        videoLinks[i].appendChild(thumbnailImg);
+	  }
+    </script>
+  
+</body></html>

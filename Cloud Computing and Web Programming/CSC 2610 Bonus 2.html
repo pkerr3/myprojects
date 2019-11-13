@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <img style="position:absolute;" src="CSC%202610%20Bonus%202_files/cat-walk.gif">
+  
+<script>
+var img = document.getElementsByTagName('img')[0];
+img.style.position = 'absolute';
+img.style.left = '0px'
+function catWalk() {
+  var oldLeft = parseInt(img.style.left);
+  var newLeft = oldLeft + 10;
+  img.style.left = newLeft + 'px';
+  if (oldLeft > (window.innerWidth-img.width)) {
+    img.style.left = '0px';
+  }
+}
+
+window.setInterval(catWalk, 25);
+</script>
+</body></html>

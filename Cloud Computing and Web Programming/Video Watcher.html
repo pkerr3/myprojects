@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://www.csc.lsu.edu/~qywang/CS6210/HTMLExercise/lecture16/exercise1-key.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Video Watcher</title>
+    <link rel="stylesheet" type="text/css" href="./Video Watcher_files/bootstrap.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2 class="page-header">Best Videos Ever ?</h2>
+        </div>
+      </div>
+ 
+      <div class="row">
+        <div class="span3">
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=TddFnTB_7IM">Trip through the 80s<img src="./Video Watcher_files/default.jpg"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=epUk3T2Kfno">Otters Holding Hands<img src="./Video Watcher_files/default(1).jpg"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=il2IrgFHfsg">The Ooooh Cat<img src="./Video Watcher_files/default(2).jpg"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./Video Watcher_files/youtube.js.download"></script>
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+
+    <script>
+	/*Note about webpage: not sure why it has the thumbnails twice, three are from 
+	my output while the other three were there even when my code did not compile; 
+	you could delete all of this code, and you would still have three thumbnails*/
+	var linkArray = $('a');
+	var fuck = 'black';
+	for (var i = 0; i < linkArray.length; i++) {
+		var linkUrl = $(linkArray[i]).attr('href');
+		var thumbnailUrl = youtube.generateThumbnailUrl(linkUrl);
+		var img = $('<img>')
+		img.attr('src', thumbnailUrl);
+		$(linkArray[i]).append(img);
+      }  
+    </script><>
+  
+</body></html>
