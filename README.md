@@ -1,2 +1,3 @@
 # myprojects
-all of my school projects
+
+Collection of my school projects
